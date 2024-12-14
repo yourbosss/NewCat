@@ -4,6 +4,8 @@ plugins {
     alias(libs.plugins.kotlin.compose)
 }
 
+
+
 android {
     namespace = "com.example.newcat2"
     compileSdk = 34
@@ -17,6 +19,7 @@ android {
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
+
 
     buildTypes {
         release {
@@ -37,7 +40,10 @@ android {
     buildFeatures {
         compose = true
     }
+
 }
+
+
 
 dependencies {
     implementation(libs.androidx.core.ktx)
@@ -53,6 +59,7 @@ dependencies {
     implementation(libs.androidx.appcompat)
     implementation(libs.androidx.navigation.runtime.ktx)
     implementation(libs.androidx.navigation.ui.ktx)
+    implementation(libs.play.services.maps)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
@@ -65,4 +72,18 @@ dependencies {
     implementation("com.squareup.retrofit2:converter-gson:2.9.0")
     implementation("com.squareup.okhttp3:logging-interceptor:4.9.3")
     implementation("androidx.recyclerview:recyclerview:1.2.1")
+
+
+    // Облегченная библиотека, содержит только карту, слой пробок,
+    // LocationManager, UserLocationLayer
+    // и возможность скачивать офлайн-карты (только в платной версии).
+    implementation("com.yandex.android:maps.mobile:4.9.0-lite")
+
+    // Полная библиотека в дополнение к lite версии предоставляет автомобильную маршрутизацию,
+    // веломаршрутизацию, пешеходную маршрутизацию и маршрутизацию на общественном транспорте,
+    // поиск, suggest, геокодирование и отображение панорам.
+    implementation("com.yandex.android:maps.mobile:4.9.0-full")
+    implementation ("com.yandex.android:mapkit:4.0.0")
+
+
 }

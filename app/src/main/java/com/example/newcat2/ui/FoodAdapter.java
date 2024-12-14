@@ -1,6 +1,9 @@
 package com.example.newcat2.ui;
 
+import static androidx.core.content.ContextCompat.startActivity;
+
 import android.content.Context;
+import android.content.Intent;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -26,6 +29,7 @@ public class FoodAdapter extends RecyclerView.Adapter<FoodAdapter.FoodViewHolder
         this.context = context; // Инициализация контекста
         this.foodList = foodList;
     }
+
 
     @NonNull
     @Override
@@ -62,20 +66,25 @@ public class FoodAdapter extends RecyclerView.Adapter<FoodAdapter.FoodViewHolder
             foodCalories = itemView.findViewById(R.id.food_calories);
             addButton = itemView.findViewById(R.id.add_corm_in_map);
 
-            // Установка обработчика нажатий на кнопку
-            addButton.setOnClickListener(new View.OnClickListener() {
+            addButton.setOnClickListener(new View.OnClickListener() { //КНОПКА ДЛЯ ПЕРЕХОДА В ГОРОД
                 @Override
                 public void onClick(View v) {
                     // Обработка нажатия на кнопку
                     int position = getAdapterPosition();
                     if (position != RecyclerView.NO_POSITION) {
                         FoodItem clickedItem = foodList.get(position);
-                        Log.e("asdf", "asdf");
+                        Log.e("Clicked Item", "Name: " + clickedItem.getName());
 
+                        // Переход на MapActivity с координатами Кемерово
+                        Intent intent = new Intent(context, MapActivity.class);
+                        intent.putExtra("latitude", 55.3964); // Широта Кемерово
+                        intent.putExtra("longitude", 86.0859); // Долгота Кемерово
+                        context.startActivity(intent); // Запуск активности с помощью контекста
                     }
                 }
             });
         }
+
 
         public void bind(FoodItem foodItem) {
             // Устанавливаем данные в соответствующие TextViews
@@ -85,4 +94,7 @@ public class FoodAdapter extends RecyclerView.Adapter<FoodAdapter.FoodViewHolder
             foodCalories.setText(String.valueOf(foodItem.getColorieContent())); // Предполагается, что у FoodItem есть метод getCalories()
         }
     }
+
 }
+
+

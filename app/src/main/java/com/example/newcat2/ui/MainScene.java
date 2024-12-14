@@ -117,6 +117,7 @@ public class MainScene extends AppCompatActivity {
         return new FilterRequest(isAdult, isPremium, isSterilized, isWetFood);
     }
 
+
 }
 
 
