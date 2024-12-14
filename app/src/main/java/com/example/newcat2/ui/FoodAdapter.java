@@ -70,7 +70,7 @@ public class FoodAdapter extends RecyclerView.Adapter<FoodAdapter.FoodViewHolder
                     int position = getAdapterPosition();
                     if (position != RecyclerView.NO_POSITION) {
                         FoodItem clickedItem = foodList.get(position);
-                        Log.e("asdf", "asdf");git init
+                        Log.e("asdf", "asdf");
 
                     }
                 }
