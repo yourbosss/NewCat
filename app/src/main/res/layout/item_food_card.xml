@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardCornerRadius="10dp"
+    app:cardElevation="5dp"
+    android:layout_margin="10dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="128dp"
+        android:background="#D9D9D9">
+
+        <ImageView
+            android:id="@+id/food_image"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginLeft="14dp"
+            android:layout_marginTop="14dp"
+            android:layout_marginBottom="14dp"
+            android:src="@drawable/corm" />
+
+        <!-- Название корма -->
+        <TextView
+            android:id="@+id/food_name"
+            android:layout_width="150dp"
+            android:layout_height="22dp"
+            android:layout_marginLeft="14dp"
+            android:layout_marginTop="14dp"
+            android:layout_toEndOf="@+id/food_image"
+            android:textColor="@android:color/black"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <!-- Описание корма -->
+        <TextView
+            android:id="@+id/food_description"
+            android:layout_width="145dp"
+            android:layout_height="68dp"
+            android:layout_below="@id/food_name"
+            android:layout_marginStart="14dp"
+            android:layout_marginLeft="14dp"
+            android:layout_marginTop="8dp"
+            android:layout_toEndOf="@+id/food_image"
+            android:textColor="@android:color/darker_gray"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/food_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/food_name"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="3dp"
+            android:layout_marginEnd="14dp"
+            android:textColor="@android:color/black"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/food_price_description"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/food_price"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="6dp"
+            android:layout_marginEnd="14dp"
+            android:text="Цена"
+            android:textColor="@android:color/black"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/food_calories"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/food_name"
+            android:layout_marginTop="3dp"
+            android:layout_marginEnd="8dp"
+            android:layout_toStartOf="@+id/food_price"
+
+            android:textColor="@android:color/black"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/food_calories_description"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/food_price"
+            android:layout_marginTop="6dp"
+            android:text="@string/Calorie"
+            android:textSize="12sp"
+            android:layout_alignEnd="@+id/food_calories"
+            android:textColor="@android:color/black"></TextView>
+
+        <Button
+            android:id="@+id/add_corm_in_map"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginEnd="14dp"
+            android:layout_marginBottom="14dp"
+            android:backgroundTint="#A55656"
+            android:text="проверить"
+            android:textSize="10sp"
+            android:textStyle="normal"
+            android:focusable="true">
+        </Button>
+
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>
