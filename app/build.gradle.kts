@@ -77,13 +77,11 @@ dependencies {
     // Облегченная библиотека, содержит только карту, слой пробок,
     // LocationManager, UserLocationLayer
     // и возможность скачивать офлайн-карты (только в платной версии).
-    implementation("com.yandex.android:maps.mobile:4.9.0-lite")
+//    implementation("com.yandex.android:maps.mobile:4.9.0-lite")
 
     // Полная библиотека в дополнение к lite версии предоставляет автомобильную маршрутизацию,
     // веломаршрутизацию, пешеходную маршрутизацию и маршрутизацию на общественном транспорте,
     // поиск, suggest, геокодирование и отображение панорам.
     implementation("com.yandex.android:maps.mobile:4.9.0-full")
-    implementation ("com.yandex.android:mapkit:4.0.0")
-
-
+//    implementation ("com.yandex.android:mapkit:4.0.0")
 }

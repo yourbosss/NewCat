@@ -34,5 +34,11 @@
                 </intent-filter>
                 <!-- Эта активность будет открываться после LoginActivity -->
             </activity>
+            <!-- Объявление вашей активности MapActivity -->
+            <activity android:name=".ui.MapActivity"
+                android:exported="true"
+                android:theme="@style/Theme.NewCat2.NoActionBar"
+                />
+            <activity android:name=".ui.shop.ShopDetailActivity"></activity>
         </application>
 </manifest>
