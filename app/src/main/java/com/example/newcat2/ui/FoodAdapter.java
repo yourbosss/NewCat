@@ -25,7 +25,7 @@ public class FoodAdapter extends RecyclerView.Adapter<FoodAdapter.FoodViewHolder
     private List<FoodItem> foodList;
     private Context context; // Контекст для загрузки изображений и других операций
 
-    public FoodAdapter(List<FoodItem> foodList) {
+    public FoodAdapter(Context context, List<FoodItem> foodList) {
         this.context = context; // Инициализация контекста
         this.foodList = foodList;
     }
@@ -77,8 +77,7 @@ public class FoodAdapter extends RecyclerView.Adapter<FoodAdapter.FoodViewHolder
 
                         // Переход на MapActivity с координатами Кемерово
                         Intent intent = new Intent(context, MapActivity.class);
-                        intent.putExtra("latitude", 55.3964); // Широта Кемерово
-                        intent.putExtra("longitude", 86.0859); // Долгота Кемерово
+                        intent.putExtra("id", clickedItem.getId()); // Передаем id
                         context.startActivity(intent); // Запуск активности с помощью контекста
                     }
                 }

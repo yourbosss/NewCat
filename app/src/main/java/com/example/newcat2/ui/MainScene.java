@@ -42,7 +42,7 @@ public class MainScene extends AppCompatActivity {
         // Инициализация RecyclerView
         recyclerView = findViewById(R.id.recycler_view); // Исправлено: присваиваем результат findViewById переменной recyclerView
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
-        adapter = new FoodAdapter(foodItemViews);
+        adapter = new FoodAdapter(this, foodItemViews);
         recyclerView.setAdapter(adapter);
 
         fetchFoodItems();
